@@ -14,7 +14,6 @@ const vehicleSchema = new mongoose.Schema({
   color:              { type: String, default: '' }
 }, { timestamps: true });
 
-vehicleSchema.index({ customer: 1 });
-vehicleSchema.index({ registrationNumber: 1 });
+
 
 module.exports = mongoose.model('Vehicle', vehicleSchema);

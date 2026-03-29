@@ -11,6 +11,6 @@ const vehicleCatalogSchema = new mongoose.Schema({
   models:      [modelSubSchema]
 });
 
-vehicleCatalogSchema.index({ makeName: 1 });
+
 
 module.exports = mongoose.model('VehicleCatalog', vehicleCatalogSchema);

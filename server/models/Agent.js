@@ -19,6 +19,6 @@ const agentSchema = new mongoose.Schema({
   profileImage:   { type: String, default: null }
 }, { timestamps: true });
 
-agentSchema.index({ email: 1 });
+
 
 module.exports = mongoose.model('Agent', agentSchema);

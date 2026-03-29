@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-require('dotenv').config({ path: '../.env' });
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 const Plan = require('../models/Plan');
 const VehicleCatalog = require('../models/VehicleCatalog');
@@ -54,18 +55,34 @@ const plansData = [
 ];
 
 const vehicleCatalogData = [
-  {
-    makeName: 'Maruti Suzuki', vehicleType: 'Car',
-    models: [{ modelName: 'Swift' }, { modelName: 'Baleno' }, { modelName: 'Wagon R' }]
-  },
-  {
-    makeName: 'Hyundai', vehicleType: 'Car',
-    models: [{ modelName: 'i20' }, { modelName: 'Creta' }, { modelName: 'Venue' }]
-  },
-  {
-    makeName: 'Royal Enfield', vehicleType: 'Bike',
-    models: [{ modelName: 'Classic 350' }, { modelName: 'Meteor 350' }]
-  }
+  // Cars
+  { makeName: 'Maruti Suzuki', vehicleType: 'Car', models: [{ modelName: 'Swift' }, { modelName: 'Baleno' }, { modelName: 'Wagon R' }, { modelName: 'Brezza' }, { modelName: 'Dzire' }] },
+  { makeName: 'Hyundai', vehicleType: 'Car', models: [{ modelName: 'i20' }, { modelName: 'Creta' }, { modelName: 'Venue' }, { modelName: 'Verna' }, { modelName: 'Tucson' }] },
+  { makeName: 'Tata Motors', vehicleType: 'Car', models: [{ modelName: 'Nexon' }, { modelName: 'Harrier' }, { modelName: 'Punch' }, { modelName: 'Tiago' }, { modelName: 'Safari' }] },
+  { makeName: 'Mahindra', vehicleType: 'Car', models: [{ modelName: 'XUV700' }, { modelName: 'Thar' }, { modelName: 'Scorpio-N' }, { modelName: 'Bolero' }, { modelName: 'XUV300' }] },
+  { makeName: 'Toyota', vehicleType: 'Car', models: [{ modelName: 'Innova Crysta' }, { modelName: 'Fortuner' }, { modelName: 'Glanza' }, { modelName: 'Urban Cruiser' }, { modelName: 'Camry' }] },
+  { makeName: 'Honda', vehicleType: 'Car', models: [{ modelName: 'City' }, { modelName: 'Amaze' }, { modelName: 'Elevate' }, { modelName: 'Jazz' }] },
+  
+  // Bikes
+  { makeName: 'Royal Enfield', vehicleType: 'Bike', models: [{ modelName: 'Classic 350' }, { modelName: 'Meteor 350' }, { modelName: 'Himalayan' }, { modelName: 'Interceptor 650' }] },
+  { makeName: 'Honda 2Wheelers', vehicleType: 'Bike', models: [{ modelName: 'Activa 6G' }, { modelName: 'Shine' }, { modelName: 'Unicorn' }, { modelName: 'Dio' }, { modelName: 'Hness CB350' }] },
+  { makeName: 'TVS', vehicleType: 'Bike', models: [{ modelName: 'Jupiter' }, { modelName: 'Apache RTR' }, { modelName: 'Ntorq' }, { modelName: 'Raider' }, { modelName: 'XL100' }] },
+  { makeName: 'Bajaj', vehicleType: 'Bike', models: [{ modelName: 'Pulsar 150' }, { modelName: 'Dominar 400' }, { modelName: 'Avenger' }, { modelName: 'Chetak EV' }] },
+  { makeName: 'Yamaha', vehicleType: 'Bike', models: [{ modelName: 'MT-15' }, { modelName: 'R15 V4' }, { modelName: 'FZS-FI' }, { modelName: 'RayZR' }, { modelName: 'Fascino' }] },
+  
+  // Trucks/Commercial
+  { makeName: 'Tata Commercial', vehicleType: 'Truck', models: [{ modelName: 'Ace Gold' }, { modelName: 'Signa 4825.T' }, { modelName: 'Intra V30' }, { modelName: 'Winger' }] },
+  { makeName: 'Ashok Leyland', vehicleType: 'Truck', models: [{ modelName: 'Dost+' }, { modelName: 'Bada Dost' }, { modelName: 'Ecomet 1615' }, { modelName: 'Boss' }] },
+  { makeName: 'Mahindra Commercial', vehicleType: 'Truck', models: [{ modelName: 'Bolero Maxx Pik-Up' }, { modelName: 'Supro Profit Truck' }, { modelName: 'Furio' }, { modelName: 'Jeeto' }] },
+  { makeName: 'Eicher', vehicleType: 'Truck', models: [{ modelName: 'Pro 2049' }, { modelName: 'Pro 3015' }, { modelName: 'Pro 6048' }] },
+  
+  // Buses
+  { makeName: 'Volvo', vehicleType: 'Bus', models: [{ modelName: '9400' }, { modelName: '8400' }] },
+  { makeName: 'Scania', vehicleType: 'Bus', models: [{ modelName: 'Metrolink' }] },
+
+  // Three-Wheelers
+  { makeName: 'Bajaj Commercial', vehicleType: 'Three-Wheeler', models: [{ modelName: 'RE Auto Rickshaw' }, { modelName: 'Maxima C' }, { modelName: 'Compact RE' }] },
+  { makeName: 'Piaggio', vehicleType: 'Three-Wheeler', models: [{ modelName: 'Ape City' }, { modelName: 'Ape Xtra LDX' }] }
 ];
 
 async function seed() {
