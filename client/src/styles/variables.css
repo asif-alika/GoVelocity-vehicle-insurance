@@ -1,0 +1,128 @@
+/* ========================================================
+   GoVelocity Insurance — CSS Custom Properties (Design Tokens)
+   ======================================================== */
+
+:root {
+  /* ── Colors ── */
+  --primary:          #6C63FF;
+  --primary-light:    #8B83FF;
+  --primary-dark:     #5A52E0;
+  --primary-glow:     rgba(108, 99, 255, 0.3);
+
+  --secondary:        #00D4AA;
+  --secondary-light:  #33DFC0;
+  --secondary-dark:   #00B894;
+
+  --accent:           #FF6B6B;
+  --accent-light:     #FF8E8E;
+  --accent-dark:      #E85555;
+
+  --warning:          #FFB020;
+  --success:          #00D4AA;
+  --error:            #FF6B6B;
+  --info:             #6C63FF;
+
+  /* ── Dark Theme Surfaces ── */
+  --bg-primary:       #0A0E27;
+  --bg-secondary:     #0F1335;
+  --bg-surface:       #141832;
+  --bg-surface-light: #1A1F42;
+  --bg-card:          #181D40;
+  --bg-input:         #1E2350;
+  --bg-hover:         #222756;
+
+  /* ── Text ── */
+  --text-primary:     #FFFFFF;
+  --text-secondary:   #B4B8D4;
+  --text-tertiary:    #7A7FA0;
+  --text-muted:       #5A5E80;
+
+  /* ── Glass Effects ── */
+  --glass-bg:         rgba(255, 255, 255, 0.04);
+  --glass-border:     rgba(255, 255, 255, 0.08);
+  --glass-bg-hover:   rgba(255, 255, 255, 0.07);
+
+  /* ── Borders ── */
+  --border-color:     rgba(255, 255, 255, 0.08);
+  --border-light:     rgba(255, 255, 255, 0.04);
+
+  /* ── Radius ── */
+  --radius-sm:        6px;
+  --radius-md:        10px;
+  --radius-lg:        16px;
+  --radius-xl:        24px;
+  --radius-full:      50px;
+
+  /* ── Shadows ── */
+  --shadow-sm:        0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md:        0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg:        0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-xl:        0 16px 48px rgba(0, 0, 0, 0.4);
+  --shadow-glow:      0 0 40px rgba(108, 99, 255, 0.15);
+  --shadow-glow-lg:   0 0 80px rgba(108, 99, 255, 0.2);
+
+  /* ── Typography ── */
+  --font-family:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:        'JetBrains Mono', 'Fira Code', monospace;
+
+  --fs-xs:            0.75rem;
+  --fs-sm:            0.875rem;
+  --fs-base:          1rem;
+  --fs-md:            1.125rem;
+  --fs-lg:            1.25rem;
+  --fs-xl:            1.5rem;
+  --fs-2xl:           2rem;
+  --fs-3xl:           2.5rem;
+  --fs-4xl:           3rem;
+  --fs-5xl:           3.5rem;
+  --fs-hero:          4.5rem;
+
+  --fw-regular:       400;
+  --fw-medium:        500;
+  --fw-semibold:      600;
+  --fw-bold:          700;
+  --fw-extrabold:     800;
+
+  --lh-tight:         1.1;
+  --lh-snug:          1.25;
+  --lh-normal:        1.5;
+  --lh-relaxed:       1.7;
+
+  /* ── Spacing ── */
+  --spacing-xs:       0.25rem;
+  --spacing-sm:       0.5rem;
+  --spacing-md:       1rem;
+  --spacing-lg:       1.5rem;
+  --spacing-xl:       2rem;
+  --spacing-2xl:      3rem;
+  --spacing-3xl:      4rem;
+  --spacing-4xl:      6rem;
+
+  /* ── Layout ── */
+  --max-width:        1280px;
+  --sidebar-width:    280px;
+  --navbar-height:    72px;
+
+  /* ── Transitions ── */
+  --transition-fast:  150ms ease;
+  --transition-base:  250ms ease;
+  --transition-slow:  400ms ease;
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Z-Index ── */
+  --z-dropdown:       100;
+  --z-sticky:         200;
+  --z-fixed:          300;
+  --z-overlay:        400;
+  --z-modal:          500;
+  --z-toast:          600;
+
+  /* ── Gradients ── */
+  --gradient-primary:  linear-gradient(135deg, #6C63FF 0%, #8B83FF 50%, #00D4AA 100%);
+  --gradient-hero:     linear-gradient(135deg, #0A0E27 0%, #141832 40%, #1A1F42 100%);
+  --gradient-card:     linear-gradient(145deg, rgba(108, 99, 255, 0.08), rgba(0, 212, 170, 0.05));
+  --gradient-button:   linear-gradient(135deg, #6C63FF, #8B83FF);
+  --gradient-accent:   linear-gradient(135deg, #FF6B6B, #FF8E8E);
+  --gradient-success:  linear-gradient(135deg, #00D4AA, #33DFC0);
+  --gradient-glass:    linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+}
